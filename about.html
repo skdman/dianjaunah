@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dianjaunah | About</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#5a3e36;line-height:1.6;}
+.container{width:90%;max-width:1200px;margin:auto;}
+.site-header{border-bottom:1px solid #f2dede;position:sticky;top:0;background:#fff;z-index:100;transition:all .3s ease;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;transition:all .3s ease;}
+.logo img{height:65px;transition:all .3s ease;}
+.main-nav ul{list-style:none;display:flex;align-items:center;gap:20px;}
+.main-nav a{text-decoration:none;color:#5a3e36;font-weight:600;transition:.2s;}
+.main-nav a:hover{color:#777;}
+.dropdown{position:relative;}
+.mega-dropdown .mega-menu{position:absolute;left:0;top:100%;width:700px;background:#fff0f5;border-top:1px solid #f2dede;box-shadow:0 8px 25px rgba(90,62,54,0.1);display:flex;justify-content:space-between;padding:30px 40px;opacity:0;visibility:hidden;transition:all .3s ease;z-index:99;}
+.mega-dropdown:hover .mega-menu{opacity:1;visibility:visible;}
+.mega-column{flex:1;}
+.mega-column h4{font-size:12px;color:#b18b82;margin-bottom:10px;letter-spacing:1px;}
+.mega-column a{display:block;color:#5a3e36;text-decoration:none;font-size:14px;margin:5px 0;transition:color .2s;}
+.mega-column a:hover{color:#e86b8a;}
+.country-select{position:relative;cursor:pointer;font-size:14px;}
+.country-select .selected-country{display:flex;align-items:center;gap:6px;border:1px solid #f2dede;padding:6px 10px;border-radius:5px;background:#fff;transition:0.3s;}
+.country-select .selected-country:hover{background:#ffe6f0;}
+.country-select .selected-country img{width:20px;height:14px;object-fit:cover;}
+.country-select .country-dropdown{position:absolute;top:110%;right:0;background:#fff0f5;border:1px solid #f2dede;border-radius:6px;box-shadow:0 5px 15px rgba(90,62,54,0.08);opacity:0;visibility:hidden;transition:all .3s ease;z-index:99;}
+.country-select:hover .country-dropdown{opacity:1;visibility:visible;}
+.country-select .country-option{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;transition:background .2s;}
+.country-select .country-option:hover{background:#ffe6f0;}
+.add-cart-btn{border:none;padding:8px 15px;border-radius:5px;background:#e86b8a;color:#fff;cursor:pointer;font-weight:600;transition:.2s;}
+.add-cart-btn:hover{background:#d35470;}
+.cart-popup{position:fixed;top:20px;right:20px;background:#fff0f5;border:1px solid #f2dede;padding:15px 20px;border-radius:8px;box-shadow:0 5px 15px rgba(90,62,54,0.2);display:none;z-index:999;}
+.page-section{padding:60px 0;text-align:center;background: #fff;}
+.page-section h1{font-size:32px;margin-bottom:20px;}
+.page-section p{font-size:16px;color:#8b5e57;max-width:700px;margin:auto;}
+.site-footer{border-top:1px solid #f2dede;padding:20px 0;text-align:center;background:#fff0f5;font-size:14px;color:#8b5e57;}
+.mobile-toggle{display:none;background:none;border:0;cursor:pointer;}
+.mobile-toggle span{display:block;width:25px;height:2px;background:#5a3e36;margin:5px 0;}
+
+/* New Story Section */
+.story-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  gap: 0; 
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  background: #ffe6f0;
+  border-radius: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.story-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.story-img {
+  flex: 1;
+  min-width: 250px;
+}
+
+.story-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  object-fit: cover; 
+  box-shadow: none; 
+}
+
+.story-desc {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  padding: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+.story-desc h2 {
+  font-size: 24px;
+  color: #5a3e36;
+  margin-bottom: 10px;
+}
+
+.story-desc p {
+  font-size: 16px;
+  color: #8b5e57;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .story-item,
+  .story-item.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-img img {
+    max-width: 100%;
+  }
+
+  .story-desc {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<div class="container header-inner">
+<a href="index.html" class="logo"><img src="../dianjaunah/img/logooo.jpeg" alt="Dianjaunah Logo"></a>
+
+<nav class="main-nav" id="mainNav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html" style="color:#e86b8a;">About</a></li>
+<li class="dropdown mega-dropdown">
+<a href="product.html">Products ▾</a>
+<div class="mega-menu">
+<div class="mega-column">
+<h4>MEN</h4>
+<a href="sweatshirt-men.html">Sweatshirt</a>
+<a href="hoodie-men.html">Hoodie</a>
+<a href="apak-men.html">Apak</a>
+</div>
+<div class="mega-column">
+<h4>WOMEN</h4>
+<a href="stoken-women.html">Stoken</a>
+<a href="sweatshirt-women.html">Sweatshirt</a>
+<a href="hoodie-women.html">Hoodie</a>
+<a href="stripeset-women.html">DJCK Stripe Set</a>
+<a href="flowyree-women.html">Flowy Ree Set</a>
+<a href="fishtail-women.html">Fishtail Blouse</a>
+<a href="misthree-women.html">Misthree</a>
+<a href="bawalcorak-women.html">Bawal Corak</a>
+<a href="serkop-women.html">Serkop</a>
+</div>
+<div class="mega-column">
+<h4>COSMETICS</h4>
+<a href="nail-women.html">Nail Colour</a>
+<a href="liquid-women.html">Liquid Foundation</a>
+<a href="blusher-women.html">Blusher Igauan</a>
+<a href="lipmatte-women.html">Lipmatte Obses X DJCK</a>
+</div>
+</div>
+</li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li>
+<div class="country-select">
+<div class="selected-country"><span>Malaysia</span><span>▼</span></div>
+<div class="country-dropdown">
+<div class="country-option"><span>Malaysia</span></div>
+<div class="country-option"><span>Singapore</span></div>
+<div class="country-option"><span>Indonesia</span></div>
+</div>
+</div>
+</li>
+<li><a href="cart.html" class="add-cart-btn" id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</a>
+</li>
+</ul>
+</nav>
+
+<button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+</div>
+</header>
+
+<div class="cart-popup" id="cartPopup">
+  <h4>Cart Items</h4>
+  <ul id="cartItemsList"></ul>
+</div>
+
+<section class="page-section">
+<h1>About Dianjaunah</h1>
+</section>
+
+<!-- New Story Section -->
+<section class="page-section" id="our-story">
+  <div class="container">
+    <div class="story-item">
+      <div class="story-img">
+        <img src="img/bil.jpeg" alt="Our Beginnings">
+      </div>
+      <div class="story-desc">
+        <h2>Bibliography</h2>
+        <p>Dian Jaunah (social brand: Dian Jaunah Cantik Kaya, also styled DJCK) is Malaysian teacher and social media creator with small-business owner known for lifestyle/beauty content and online merchandising.</p>
+      </div>
+    </div>
+
+    <div class="story-item reverse">
+      <div class="story-img">
+        <img src="img/vis.jpeg" alt="Our Vision">
+      </div>
+      <div class="story-desc">
+        <h2> Vision</h2>
+        <p>To inspire confidence and self-worth in every woman by combining beauty,education, and empowerment by proving that being “cantik” (beautiful) and “kaya&nbsp; &nbsp; (successful) begins with knowledge, effort, and heart.</p>
+      </div>
+    </div>
+
+    <div class="story-item">
+      <div class="story-img">
+        <img src="img/mis.jpeg" alt="Our Mission">
+      </div>
+      <div class="story-desc">
+        <h2>Mission</h2>
+        <p>Build a supportive community by creating a positive and inclusive platform (DJCK family) where women and men uplift one another in business, education, and self-love.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<p>© <span id="year"></span> Dianjaunah. All Rights Reserved.</p>
+</div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Set year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile menu toggle
+  const toggle = document.getElementById("mobileToggle");
+  const nav = document.getElementById("mainNav");
+  toggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+  // Country select
+  document.querySelectorAll('.country-option').forEach(option => {
+    option.addEventListener('click', () => {
+      const selected = document.querySelector('.selected-country');
+      selected.innerHTML = option.innerHTML + '<span>▼</span>';
+    });
+  });
+
+  // Cart handling
+  const cartBtn = document.getElementById("cartBtn");
+  const cartPopup = document.getElementById("cartPopup");
+  const cartCount = document.getElementById("cartCount");
+  const cartItemsList = document.getElementById("cartItemsList");
+
+  function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+  }
+
+  function updateCartDisplay() {
+    const cart = getCart();
+
+    // Update total quantity in header
+    const totalQty = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
+    cartCount.textContent = totalQty;
+
+    // Update cart popup
+    cartItemsList.innerHTML = "";
+    cart.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - ${item.price || ''} x ${item.qty || 1}`;
+
+      const removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remove";
+      removeBtn.style.cssText = `
+        margin-left:10px;
+        background:#d35470;
+        color:#fff;
+        border:none;
+        border-radius:4px;
+        cursor:pointer;
+        padding:2px 6px;
+      `;
+      removeBtn.addEventListener("click", () => {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartDisplay();
+      });
+
+      li.appendChild(removeBtn);
+      cartItemsList.appendChild(li);
+    });
+  }
+
+  // Show/hide cart popup
+  cartBtn.addEventListener("click", () => {
+    updateCartDisplay();
+    cartPopup.style.display = cartPopup.style.display === "block" ? "none" : "block";
+  });
+
+  // Listen to localStorage changes from other tabs/pages
+  window.addEventListener("storage", (e) => {
+    if (e.key === "cart") {
+      updateCartDisplay();
+    }
+  });
+
+  // Initial display
+  updateCartDisplay();
+});
+
+// Sticky header
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".site-header");
+  const logo = document.querySelector(".logo img");
+  if (window.scrollY > 50) { 
+    header.style.padding = "5px 0"; 
+    logo.style.height = "55px"; 
+  } else { 
+    header.style.padding = "10px 0"; 
+    logo.style.height = "65px"; 
+  }
+});
+</script>
+</body>
+</html>
